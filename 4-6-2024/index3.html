@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        // 1. Write a JS code to print numbers from 1 to 10
+        for (let i = 0; i <= 10; i++) {
+            console.log(i)
+        }
+
+
+        /*2. Write a JS code to print Even numbers in arr :
+        var arr = [13,23,12,45,22,48,66,100]
+        */
+        /////First Solution:
+        var arr = [13,23,12,45,22,48,66,100];
+        let evenArray = [];
+        for (n of arr) {
+            for (let m = 0; m < arr.length; m++) {
+                if ( n % 2 == 0 ) {
+                    evenArray.push(n);
+                    break;
+                }
+            }
+        }   
+        console.log(evenArray);
+        /////Second Solution:
+        // for (let m = 0; m < arr.length; m++) {
+        //         if ( arr[m] % 2 == 0 ) {
+        //             console.log(arr[m]);
+        //         }
+        //  }
+        /* 
+ /******* End Your Code ********* */
+
+    /* 3. Write a JS code to print a pattern using for loop
+
+        1 
+        1 2 
+        1 2 3 
+        1 2 3 4 
+        1 2 3 4 5 
+        1 2 3 4 5 6 
+        1 2 3 4 5 6 7 
+        1 2 3 4 5 6 7 8 
+        */
+        /////solution
+        for (let h = 0; h < 9; h++) {
+            let line = ""
+                for (let j = 1; j <= h; j++){
+                    line +=   j + "  ";
+                }
+            console.log(line);
+
+        }
+ /******* End Your Code ********* */
+
+        /* 
+        Check if a string contains the letter “y”. Print “yes” if it does and “no” if it does not.
+        let x = "don’t know why"
+        */
+       /////Solution
+    let x = "don’t know why";
+    if(x.includes("y")) {
+        console.log( "yes");
+    }else{
+        console.log( "no");        
+    }
+
+
+
+    </script>
+</body>
+</html>
