@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLags</title>
+</head>
+<body>
+    
+    <select name="flag" id="flag" onchange="imgChange(this.value)">
+        <option value="img/jor.jpg">Jordan</option>
+        <option value="img/pal.png">Palastean</option>
+    </select>
+    <br>
+    <img id="img" src="img/jor.jpg" style="width: 300px;">
+    <script>
+        function imgChange(value){
+            document.getElementById ("img").src=value; 
+        }
+    </script>
+
+</body>
+</html>
