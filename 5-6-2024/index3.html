@@ -4,8 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        div {
+            width: 500px;
+            height: 150px;
+            border: 5px solid;
+            margin: 10px;
+
+        }
+        p {
+            text-align: center;
+            font-size: larger;
+        }
+        form {
+            margin: 10px;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .fantasy {
+            font-family: fantasy;
+        }
+        .tnroma{
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <form action="">
+        <select name="font"  onchange="ff(value)" id="fint">
+            <!-- <option value=""></option> -->
+            <option value="Fantasy">Fantasy</option>
+            <option value="Times">Times New Roman</option>
+        </select>
+        <select name="size" id="size" onchange="fsize(value)">
+            <option value="10px">10px</option>
+            <option value="20px">20px</option>
+            <option value="30px">30px</option>
+            <option value="40px">40px</option>
+        </select>
+        <input type="checkbox" onclick="italicS()"  id="italic" name="" value="">
+        <label for="italic">Italic</label>
+        <input type="checkbox" onclick="boldS()" id="bold" name="" value="">
+        <label for="bold">Bold</label>
+        <input type="checkbox" onclick="underS()" id="underline" name="" value="" >
+        <label for="underline">Underline</label>
+
+    </form>
+    <div>
+        <p id="myPar">the quick brown fox over the lazy dog</p>
+    </div>
+
+
+
+
+    <script>
+        let textContant = document.getElementById("myPar");
+        
+        //for font family
+        function ff(value){
+            if (value == "Fantasy"){
+                textContant.classList.toggle('fantasy');
+            }else if (value == "Times"){
+                textContant.classList.toggle('tnroma');
+            }
+        }
+        // function tnr() {
+        //     textContant.classList.add('tnroma');
+        // }
+
+        //for font size
+        function fsize(value){
+            textContant.style.fontSize = value ;
+        }
+
+
+
+
+
+        // for checkbox
+        function italicS(){
+            textContant.classList.toggle('italic');
+        }
+        function boldS(){
+            textContant.classList.toggle('bold');
+        }
+        function underS(){
+            textContant.classList.toggle('underline');
+        }
+
+
+
+
+    </script>
 </body>
 </html>

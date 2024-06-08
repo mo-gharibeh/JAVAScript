@@ -28,24 +28,24 @@ equal or between 90 and 100 ===> A
 function  rate(mark){
     if (mark < 50){
     return "Fail";
-    }else if ( 50 <= mark <= 59 ) {
+    }else if ( 50 <= mark  && mark <= 59 ) {
         return "E";
     }
-    else if ( 60 <= mark <= 69 ) {
+    else if ( 60 <= mark && mark <= 69 ) {
         return "D";
     }
-    else if ( 70 <= mark <= 79 ) {
+    else if ( 70 <= mark && mark <= 79 ) {
         return "C";
     }
-    else if ( 80 <= mark <= 89 ) {
+    else if ( 80 <= mark && mark <= 89 ) {
         return "B";
     }
-    else if ( 90 <= mark <= 100 ) {
+    else if ( 90 <= mark && mark <= 100 ) {
         return "A";
     }
 }
 
-console.log(rate(65));
+console.log(rate(100));
     </script>
 </body>
 </html>
