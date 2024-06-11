@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Regex</h1>
+    <form id="myForm">
+        <label>Enter a Fname:
+
+            <input type="text" id="fname" onkeyup=validateForm()>
+            <span class="error" id="fnameError" ></span>
+        </label><br><br>
+        <label>Enter a Lname:
+            <input type="text" id="lname" onkeyup=validateForm()>
+            <span class="error" id="lnameError"></span>
+        </label><br><br>
+        <label>Enter a Bdate:
+            <input type="text" id="bdate" onkeyup=validateForm()>
+            <span class="error" id="bdateError"></span>
+        </label><br><br>
+        <label>Enter an email:
+            <input type="text" id="email" onkeyup=validateForm()>
+            <span class="error" id="emailError" ></span>
+        </label><br><br>
+        <label>Confirm Email:
+            <input type="text" id="confirmEmail" onkeyup=validateForm()>
+            <span class="error" id="confirmEmailError"></span>
+        </label><br><br>
+        <label>Password:
+            <input type="password" id="password" onkeyup=validateForm()>
+            <span class="error" id="passwordError"></span>
+        </label><br><br>
+        <label>Confirm password:
+            <input type="password" id="confirmPassword" onkeyup=validateForm()>
+            <span class="error" id="confirmPasswordError"></span>
+        </label><br><br>
+        <button type="button"> Submit</button> <!-- onclick="validateForm()"-->
+    </form>
+
+
+    <script src="regex.js"></script>
+</body>
+</html>
