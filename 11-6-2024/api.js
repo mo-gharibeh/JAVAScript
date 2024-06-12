@@ -1,38 +1,57 @@
-const url = 'https://66681676f53957909ff67af8.mockapi.io/users/Animals';
+// const url = 'https://66681676f53957909ff67af8.mockapi.io/users/Animals';
 
-let animals = document.getElementById('animals');
+// let animals = document.getElementById('animals');
 // let img = document.getElementById('img');
 
-animals.onchange = gitData();
+// animals.onchange = catsndogs(value);
 
 
 
-    async function gitData(){
+//     async function gitData(){
 
-        // let animals = document.getElementById('animals');
-        let img = document.getElementById('img');
+//         // let animals = document.getElementById('animals');
+//         // let img = document.getElementById('img');
         
-        const responce = await fetch(url);
-        const jsonData = await responce.json();
-        console.log(jsonData);
-        for(let i = 0; i <= jsonData.length; i++){
-            let opt = document.createElement('option');
-            animals.appendChild(opt);
-            opt.value =  jsonData[i].name;
-            console.log(animals);
+//         const responce = await fetch(url);
+//         const jsonData = await responce.json();
+//         console.log(jsonData);
+//         document.querySelector('#img').src = jsonData[0].image;
 
-            
-                // opt.value = jsonData[i].name;
-                opt.innerHTML = jsonData[i].name;
-                img.src = jsonData[i].image;
-            
-        }
-
-    }
-
-
+//         for (i = 0; i < jsonData.length; i++) {
+//             const opt = document.createElement("option");
+//             opt.innerText = jsonData[i].name;
+//             opt.value = jsonData[i].image;
+//             document.getElementById("naimals").appendChild(opt);
+//         }
+//         }
+//         getData();
+//         // const x = document.querySelector("#img");
+//         function catsndogs(value) {
+//         img.src = value;
+//         }
 
 // gitData();
 
+const url = "https://66681676f53957909ff67af8.mockapi.io/users/Animals";
 
+    async function getData() {
+        const response = await fetch(url);
+        const jsonData = await response.json();
+        // console.log("getData" ,jsonData);
+
+        document.getElementById("img").src = jsonData[0].image;
+
+        for (i = 0; i < jsonData.length; i++) {
+        const opt = document.createElement("option");
+        opt.innerText = jsonData[i].name;
+        opt.value = jsonData[i].image;
+        document.getElementById("animals").appendChild(opt);
+        }
+    }
+    getData();
+
+    const x = document.querySelector("#img");
+    function catsndogs(value) {
+        x.src = value;
+    }
 

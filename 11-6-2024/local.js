@@ -12,7 +12,7 @@ function saveForm() {
     const siblingsDescription = document.getElementById('sDescription').value;
 
     const pl = [];
-    if (document.getElementById('html').checked) pl.push('HTML');
+    if (document.getElementById('html').checked){ pl.push('HTML')};
     if (document.getElementById('css').checked) pl.push('CSS');
     if (document.getElementById('js').checked) pl.push('JS');
 
@@ -29,6 +29,10 @@ function saveForm() {
     };
 
     localStorage.setItem('formData', JSON.stringify(formData));
+    localStorage.setItem('name', (name));
+    localStorage.setItem('age', (age));
+    localStorage.setItem('gender', (gender));
+    localStorage.setItem('pl', (pl));
     console.log(formData);
 
 }

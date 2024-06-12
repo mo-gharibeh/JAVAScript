@@ -20,6 +20,9 @@
     <h1 id="demo" onmouseover="over()"b onmouseout="out()"> Can I help you ?</h1>
     
     
+    
+
+
     <script>
         function over(){
             document.getElementById ("demo").innerHTML="Hello World"; 
@@ -30,3 +33,16 @@
     </script>
 </body>
 </html>
+
+
+
+
+try {
+    let result = 10 / 0; 
+    console.log(result);
+    
+    let obj = undefined;
+    console.log(obj.name);
+} catch (error) {
+    console.log("An error occurred: " + error.message);
+}
