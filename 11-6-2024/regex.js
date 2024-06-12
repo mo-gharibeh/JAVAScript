@@ -17,7 +17,7 @@ function validateForm() {
     if (/\d/.test(lname)) {
         document.getElementById('lnameError').textContent = "Numbers are not allowed";
     }else{
-            document.getElementById('lnameError').textContent = "";
+        document.getElementById('lnameError').textContent = "";
         }
     
     
@@ -45,6 +45,11 @@ function validateForm() {
     }
 }
 
+
+
+
+
+{
 // function clearErrors() {
 //     document.getElementById('fnameError').textContent = "";
 //     document.getElementById('lnameError').textContent = "";
@@ -54,3 +59,4 @@ function validateForm() {
 //     document.getElementById('passwordError').textContent = "";
 //     document.getElementById('confirmPasswordError').textContent = "";
 // }
+}
